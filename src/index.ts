@@ -26,11 +26,7 @@ app.use(errorHandler);
 
 const start = async () => {
     try {
-        await mongoose.connect('mongodb://auth-mongo-srv:27017/auth', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true
-        })
+        await mongoose.connect('mongodb://auth-mongo-srv:27017/auth')
         console.log('Connect to mongodb')
     } catch (err) {
         console.error(err);
