@@ -33,14 +33,18 @@ app.all('*', async () => {
 app.use(errorHandler);
 
 const start = async () => {
+  if (!process.env.JWT_KEY) {
+    throw new Error('JWT_KEY must be defined');
+  }
+
   try {
     await mongoose.connect('mongodb://auth-mongo-srv:27017/auth');
     console.log('Connect to mongodb');
   } catch (err) {
     console.error(err);
   }
-  app.listen(4000, () => {
-    console.log('Listening on port 4000');
+  app.listen(3000, () => {
+    console.log('Listening on port 3000');
   });
 };
 
