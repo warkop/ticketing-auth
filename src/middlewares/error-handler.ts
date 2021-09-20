@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable consistent-return */
+/* eslint-disable import/prefer-default-export */
 import { Request, Response, NextFunction } from 'express';
 import { CustomError } from '../errors/custom-error';
 
@@ -5,7 +8,7 @@ export const errorHandler = (
   err: Error,
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   if (err instanceof CustomError) {
     console.log(err);
@@ -13,6 +16,6 @@ export const errorHandler = (
   }
 
   res.status(400).send({
-    errors: [{ message: 'Something went wrong' }]
+    errors: [{ message: 'Something went wrong' }],
   });
 };

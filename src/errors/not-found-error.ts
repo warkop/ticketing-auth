@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable class-methods-use-this */
 import { CustomError } from './custom-error';
 
 export class NotFoundError extends CustomError {

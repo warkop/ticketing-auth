@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import { Request, Response, NextFunction } from 'express';
 import { NotAuthorizedError } from '../errors/not-authorized-error';
 

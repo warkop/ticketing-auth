@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import { CustomError } from './custom-error';
 
 export class DatabaseConnectionError extends CustomError {

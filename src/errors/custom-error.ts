@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export abstract class CustomError extends Error {
   abstract statusCode: number;
 
